@@ -1,8 +1,7 @@
-# ProjetoFormulario
-Formulario de Informações com NodeJS
+# Projeto de formulário para registro de informações
+Aplicação construida com NodeJS, Bulma.io, JQuery, Express, EJS, Commonjs, Body-parser, EJS e Consign.
 
 <h2>Como rodar o projeto </h2>
-<hr>
 <ul>
   <li>
     Instalar NodeJs no computador.
