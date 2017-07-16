@@ -1,76 +1,88 @@
-<style type="text/css">
-body{
-font-family: arial, verdana;
-font-size:12px;
+html{
+	background: rgba(74, 74, 74, 0.38);
 }
-h1{text-align:center; color:#BC0000;}
-em { font-weight: bold; vertical-align: top; color:red; }
+body{
+	
+	font-family: arial, verdana;
+	font-size:12px;
+}
+h1{
+	text-align:center; 
+	color: #4682B4; 
+	font-weight: bold;
+	font-size: 20px;
+}
+h2{
+	font-weight: bold;
+	color: #708090;
+	font-size: 20px;
+}
+em { 
+	font-weight: bold; 
+	vertical-align: 
+	top; color:red; }
+label.error { 
+	display: block; 
+	margin-top: 10px; 
+}
 
-label.error { display: block; margin-top: 10px; }
-label.error { text-align:left; float: none; color: red; margin: 0 .5em 0 0; vertical-align: top; font-size: 10px }
+label.error { 
+	text-align:left; 
+	float: none; 
+	color: red; 
+	margin: 0 .5em 0 0; 
+	vertical-align: top; 
+	font-size: 10px 
+}
+legend{
+	font-weight:bold;
+}
 
-legend{font-weight:bold;}
-
-select{min-height:20px;}
-
+.top{
+	margin-top: 20px;
+	margin-bottom: 20px
+}
+select{
+	min-height:20px;
+}
 .input80{width:300px;}
 .input60{width:250px;}
 .input40{width:180px;}
 .telefone{width:100px;}
 .input10{width:50px;}
 .input9{width:75px;}
-.hora{width:40px;}
-
-#cadastrar{
-padding:3px 6px;
-border:2px solid #fff; color:white; 
-font-family:Verdana, Arial, Helvetica, sans-serif;
-background:#BC0000; border-radius:5px; }
-
+.input1{width:95px;}
 fieldset{
-
-margin-bottom:15px;
-
-border-color: red;
-
-border-style:single;
+	margin-bottom:15px;
+	border: none;
 }
-
 fieldset p{
-
-margin-left:5px;
-margin-bottom:5px;
+	margin-left:5px;
+	margin-bottom:5px;
 }
 
-fieldset textarea{
-
-margin-left:5px;
-margin-bottom:5px;
+#centroHome{
+	background: white;
+	padding:15px;
+	box-shadow: 1px 1px 1px 1px #4a4a4a;
+	margin: 0px auto;
+	width:500px;
+}
+#centroInf{
+	background: white;
+	padding:15px;
+	box-shadow: 1px 1px 1px 1px #4a4a4a;
+	margin: 0px auto;
+	width:600px;
 }
 
-#corpo{
-width:1024px;
-height:auto;
-position:relative;
-left:50%;
-margin-left:-512px;
-margin-top:10px;
-}
-
-#esquerda{
-
-float:left;
-
-width:500px;
-
-}
-
-#direita{
-
-margin-left: 524px;
-
-}
 #estado{width:200px;}
-#cidade{width:200px;}
-
-</style>
+#cidade{width:143px;}
+#unidade{width:187px;}
+thead{
+	background: grey;
+}
+thead td h3{
+	font-weight: bold;
+	color: black; 
+}

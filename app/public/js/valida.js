@@ -3,15 +3,13 @@ jQuery(function($){
    $("#dtNascimento").mask("99/99/9999");
    $(".telefone").mask("(99) 9999-9999");
    $("#cep").mask("99999-999");
-   $(".hora").mask("99:99");
+   $("#rg").mask("**99999-999");
+   $("#cpf").mask("999.999.999.99");
    //Mascara gerada pelo plugin plugin price-format
-   
-   
 });
 
 $(document).ready( function() {
-
-	function limpa_formulário_cep() {
+    function limpa_formulário_cep() {
                 // Limpa valores do formulário de cep.
                 $("#rua").val("");
                 $("#bairro").val("");
@@ -117,9 +115,6 @@ $(document).ready( function() {
 			nome:{
 				required: true, minlength: 5
 			},
-			sexo:{
-				required: true
-			},
 			dtNascimento:{
 				required: true, dateITA:true
 			},
@@ -129,34 +124,56 @@ $(document).ready( function() {
 			rua:{
 				required: true, minlength: 5
 			},
-			numero:{
-				required: true, digits: true
-			},
-			bairro:{
-				required: true
-			},
-			cep:{
-				required: true
-			},
-			idEstado:{
-				required: true
-			},
-			idCidade:{
-				required: true
-			}
-			
-		},
+            email:{ 
+                required: true,
+                email: true
+            },
+            conf_email: {
+                required: true,
+                equalTo: "#email"
+            },
+            numero:{
+                required: true, digits: true
+            },
+            bairro:{
+                required: true
+            },
+            cep:{
+                required: true
+            },
+            rg:{
+                required: true
+            },
+            idEstado:{
+                required: true
+            },
+            idCidade:{
+                required: true
+            }
+
+        },
 		// Define as mensagens de erro PERSONALIZADAS para cada regra
 		messages:{
 			idEstado:{
-				digits: "Selecione um Estado"
+				digits: "Por favor, selecione um Estado."
 			},
 			idCidade:{
-				digits: "Selecione uma Cidade"
+				digits: "Por favor, selecione uma Cidade."
 			},
+            rg:{
+                digits: "Por favor, informe o RG corretamente."
+            },
 			telContato:{
-				required: "Digite a merda do telefone"
-			}
-		},
-	});
+				required: "Por favor, digite o telefone corretamente."
+			},   
+            email:{ 
+                required: "Entre com seu email.",
+                email: "Entre com um email válido."
+            },
+            conf_email: {
+                required: "Confirme seu email.",
+                equalTo: "O email digitado não confere."
+            }
+        },
+    });
 });
