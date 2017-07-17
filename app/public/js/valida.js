@@ -1,7 +1,7 @@
 jQuery(function($){
    //defina as máscaras de seus campos, o 9 indica um caracter numérico qualquer
    $("#dtNascimento").mask("99/99/9999");
-   $(".telefone").mask("(99) 9999-9999");
+   $(".telefone").mask("(99) 99999-9999");
    $("#cep").mask("99999-999");
    $("#rg").mask("**99999-999");
    $("#cpf").mask("999.999.999.99");
@@ -70,7 +70,7 @@ $(document).ready( function() {
                 }
             });
 
-            $.getJSON('estados_cidades.json', function (data) {
+            $.getJSON('js/estados_cidades.json', function (data) {
 
             	var items = [];
             	var options = '<option value="">escolha um estado</option>';	

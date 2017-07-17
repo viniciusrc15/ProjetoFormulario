@@ -2,17 +2,25 @@
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
+	<script src="js/jquery-1.5.2.min.js" type="text/javascript"></script>
 	<link rel="stylesheet" href="css/bulma.css">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 	<link rel="shortcut icon" href="img/inf.ico">
+	<script src="js/jspdf.min.js"></script>
+	<script src="js/html2canvas.js"></script>
+	<script src="js/geraPDF.js" type="text/javascript"></script>
 	<link rel="stylesheet" type="text/css" href="css/estilo.css" />
+	<title>Informações cadastro</title>
 </head>
 <body>
-	<div class="top">
+	<div id="conteudo" class="top">
 		<section id="centroInf">
+			<button style="align-content: center" class="button is-success" id="geraPdf">Gerar PDF</button>
 			<h1>Dados de Inscrição</h1>
+			<div id="editor"></div>
+			
 			<h2>Dados pessoais</h2>
-			<table class="table is-bordered is-striped is-narrow">
+			<table class="table is-bordered">
 				<thead>
 					<td>
 						<h3>Nome Completo</h3>					
@@ -54,16 +62,16 @@
 					<td><%= dados.telContato %></td>
 				</tbody>
 			</table>
-		</section>
-		<section id="centroInf">
-			<h2>Endereço</h2>
+			</section>
+			<section id="centroInf">
 			<table class="table is-bordered">
+				<h2>Endereço</h2>
 				<thead>
 					<td>
 						<h3>CEP</h3>					
 					</td>
 					<td>
-						<h3>Lograouro</h3>
+						<h3>Logradouro</h3>
 					</td>
 					<td>
 						<h3>Número</h3>
@@ -107,9 +115,8 @@
 					<td>Brasil</td>
 				</tbody>
 			</table>
-
-		</section>
-		<section id="centroInf">
+			</section>
+			<section id="centroInf">
 			<h2>Informações do curso</h2>
 			<table class="table is-bordered">
 				<thead>
@@ -139,6 +146,8 @@
 					<td>dados.idUnidade</td>
 				</tbody>
 			</table>
+			<p><h2>Assinatura: </h2></p>
+			<img src="<%= dados.assinatura %>" alt="">
 		</section>
 	</div>
 </body>

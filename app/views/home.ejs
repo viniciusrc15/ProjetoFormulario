@@ -13,7 +13,6 @@
 	<link rel="stylesheet" href="css/bulma.css">
 	<link rel="stylesheet" type="text/css" href="css/estilo.css" />
 	<link rel="shortcut icon" href="img/home.ico">
-
 </head>
 <body>
 	
@@ -26,7 +25,7 @@
 					<legend>Dados Pessoais</legend>
 					<p><label for="nome"><em>*</em> Nome: </label><input type="text" class="input80" id="nome" name="nome" maxlength="80"/></p>
 
-					<p><label for="dtNascimento"><em>*</em> Data de Nascimento: </label><input type="text" class="inputText" id="dtNascimento" name="dtNascimento" maxlength="10"/></p>
+					<p><label for="dtNascimento"><em>*</em> Data de Nascimento: </label><input type="text" class="inputText input9" id="dtNascimento" name="dtNascimento" maxlength="10"/></p>
 
 					<p><label for="email"><em>*</em>Email: </label><input type="text" name="email" id="email" size="20"/></p>
 
@@ -71,7 +70,8 @@
 						<p><em>*</em> Unidade: <select name="idUnidade" id="unidade" width="100">
 							<option>Selecione uma Unidade</option>
 						</select></p>
-
+						<p><em>*</em><label for="Arquivo"> Envie sua assinatura: </label><input type="file" name="assinatura" id="assinatura" required=""></p>
+						
 					</fieldset>
 					<p style="text-align:center;"><input type="submit" class="button is-success " value="Cadastrar" id="cadastrar"/></p>
 				</div>
