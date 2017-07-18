@@ -3,6 +3,13 @@ html{
 }
 body{
 	
+	background-image: url("4.jpg");
+	background-size: 100%;
+	background-origin: content-box;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color: #BEBEBE;
 	font-family: arial, verdana;
 	font-size:12px;
 }
