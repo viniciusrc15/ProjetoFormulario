@@ -1,34 +1,11 @@
 [{
-	"sigla": "CE",
-      "nome": "Centro",
-      "Cursos": [
-        "Ciencia da Computação",
-        "Engenharia de Software"
-        "Redes de Computadores",
-        "Sistemas de Informação",
-]	
- },
-
- {
- 	"sigla": "BU",
- 	"nome": "Buritis",
- 	"Cursos": [
- 		"Análise e Desenvolvimento de Sistemas",
- 		"Ciencia da Computação",
- 		"Desenvolvimento de Jogos",
- 		"Sistemas de Informação",
-
- 	]
-
- },
-
- {
- 		"sigla": "PA",
- 		"nome": "Pampulha",
- 		"Cursos": [
- 			"Análise e Desenvolvimento de Sistemas",
- 			"Engenharia de Software",
- 			"Engenharia de Computação",
- 			"Redes de Computadores",
- 		]
+	                        
+	"sigla": "SI",
+	"curso": "Sistemas de Informação",
+	"unidade": [
+		"Barro Preto",
+		"Raja"
+		"Praça da Liberdade",
+		"Centro"
+	]	
  }]
