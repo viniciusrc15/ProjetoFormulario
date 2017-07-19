@@ -1,9 +1,9 @@
+/* Trata paginas home e infomacoes*/ 
 html{
 	background: rgba(74, 74, 74, 0.38);
 }
 body{
-	
-	background-image: url("4.jpg");
+	background-image: url("../img/fundo.jpg");
 	background-size: 100%;
 	background-origin: content-box;
 	background-position: center;
@@ -12,6 +12,16 @@ body{
 	background-color: #BEBEBE;
 	font-family: arial, verdana;
 	font-size:12px;
+}
+
+
+/* Trata home formulario */ 
+#centroHome{
+	background: white;
+	padding:15px;
+	box-shadow: 1px 1px 1px 1px #4a4a4a;
+	margin: 0px auto;
+	width:500px;
 }
 h1{
 	text-align:center; 
@@ -24,15 +34,25 @@ h2{
 	color: #708090;
 	font-size: 20px;
 }
+legend{
+	font-weight:bold;
+}
+.top{
+	margin-top: 20px;
+	margin-bottom: 20px
+}
+
+
+/*Trata erros mensagem de validação */
 em { 
 	font-weight: bold; 
 	vertical-align: 
-	top; color:red; }
+	top; color:red; 
+}
 label.error { 
 	display: block; 
 	margin-top: 10px; 
 }
-
 label.error { 
 	text-align:left; 
 	float: none; 
@@ -41,17 +61,8 @@ label.error {
 	vertical-align: top; 
 	font-size: 10px 
 }
-legend{
-	font-weight:bold;
-}
 
-.top{
-	margin-top: 20px;
-	margin-bottom: 20px
-}
-select{
-	min-height:20px;
-}
+
 .input80{width:300px;}
 .input60{width:250px;}
 .input40{width:180px;}
@@ -68,13 +79,18 @@ fieldset p{
 	margin-bottom:5px;
 }
 
-#centroHome{
-	background: white;
-	padding:15px;
-	box-shadow: 1px 1px 1px 1px #4a4a4a;
-	margin: 0px auto;
-	width:500px;
+
+/*Trata selects */ 
+#estado{width:200px;}
+.altSelectUni{width:143px;}
+.altSelectCurs{width:197px;}
+#unidade{width:187px;}
+select{
+	min-height:20px;
 }
+
+
+/* trata pagina de informacoes */
 #centroInf{
 	background: white;
 	padding:15px;
@@ -82,11 +98,6 @@ fieldset p{
 	margin: 0px auto;
 	width:600px;
 }
-
-#estado{width:200px;}
-#cidade{width:143px;}
-#unidade{width:187px;}
-
 thead{
 	background: grey;
 	padding: 5pt;
