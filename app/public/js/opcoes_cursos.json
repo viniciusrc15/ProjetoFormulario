@@ -4,6 +4,7 @@
 	"curso": "Sistemas de Informação",
 	"unidade": [
 		"Barro Preto",
+<<<<<<< HEAD
 		"Raja",
 		"Praça da Liberdade",
 		"Centro"
@@ -19,3 +20,10 @@
 	]	
  }
 ]
+=======
+		"Raja"
+		"Praça da Liberdade",
+		"Centro"
+	]	
+ }]
+>>>>>>> e9714d3d43477d3fc2af3b9f199c1eb8c0333297
