@@ -9,6 +9,43 @@
 	]	
  },
  {
+	"sigla": "ADS",
+	"curso": "Analise e Desenvolvimento de Sistemas",
+	"unidade": [
+		"Barro Preto",
+		"Raja",
+		"Praça da Liberdade",
+		"Coração Eucaristico",
+		"Centro"
+	]	
+ },
+ {
+	"sigla": "EComp",
+	"curso": "Engenharia da Computação",
+	"unidade": [
+		"Barro Preto",
+		"Raja"
+	]	
+ },
+ {
+	"sigla": "ECívil",
+	"curso": "Engenharia Cívil",
+	"unidade": [
+		"Barro Preto",
+		"Raja"
+	]	
+ },
+ {
+	"sigla": "Arq",
+	"curso": "Arquitetura",
+	"unidade": [
+		"Barro Preto",
+		"Raja",
+		"Coração Eucaristico",
+		"Centro"
+	]	
+ },
+ {
 	"sigla": "CC",
 	"curso": "Ciência da Computação",
 	"unidade": [

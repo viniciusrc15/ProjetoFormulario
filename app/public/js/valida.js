@@ -1,7 +1,7 @@
 jQuery(function($){
    //defina as máscaras de seus campos, o 9 indica um caracter numérico qualquer
    $("#dtNascimento").mask("99/99/9999");
-   $(".telefone").mask("(99) 99999-9999");
+   $(".telefone").mask("(99) 9999-9999");
    $("#cep").mask("99999-999");
    $("#rg").mask("**99999-999");
    $("#cpf").mask("999.999.999.99");
@@ -19,25 +19,19 @@ $(document).ready( function() {
             
             //Quando o campo cep perde o foco.
             $("#cep").blur(function() {
-
                 //Nova variável "cep" somente com dígitos.
                 var cep = $(this).val().replace(/\D/g, '');
-
                 //Verifica se campo cep possui valor informado.
                 if (cep != "") {
-
                     //Expressão regular para validar o CEP.
                     var validacep = /^[0-9]{8}$/;
-
                     //Valida o formato do CEP.
                     if(validacep.test(cep)) {
-
                         //Preenche os campos com "..." enquanto consulta webservice.
                         $("#rua").val("...");
                         $("#bairro").val("...");
                         $("#cidade").val("...");
                         $("#uf").val("...");
-
                         //Consulta o webservice viacep.com.br/
                         $.getJSON("http://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
                         	if (!("erro" in dados)) {
@@ -69,26 +63,23 @@ $(document).ready( function() {
                     limpa_formulário_cep();
                 }
             });
-
+            // Controla Select de Estado e cidades
             $.getJSON('js/estados_cidades.json', function (data) {
-
             	var items = [];
-            	var options = '<option value="">escolha um estado</option>';	
-
+            	var options = '<option value="">Escolha um estado</option>';	
+                //Percorre json trazendo dados
             	$.each(data, function (key, val) {
             		options += '<option value="' + val.nome + '">' + val.nome + '</option>';
             	});					
+                //inclui no id select
             	$("#uf").html(options);				
-
+                //muda conteudo select conforme intens dentro das opçoes
             	$("#uf").change(function () {				
-
             		var options_cidades = '';
             		var str = "";					
-
             		$("#uf option:selected").each(function () {
             			str += $(this).text();
             		});
-
             		$.each(data, function (key, val) {
             			if(val.nome == str) {							
             				$.each(val.cidades, function (key_city, val_city) {
@@ -96,30 +87,24 @@ $(document).ready( function() {
             				});							
             			}
             		});
-
+                    //retorna pro select conforme opçoes
             		$("#cidade").html(options_cidades);
-
             	}).change();		
-
             });
-                // opções de cursos 
+                //Controla Select de 1° opção de curso 
                 $.getJSON('js/opcoes_cursos.json', function (data) {
                     var items = [];
-                    var options = '<option value="">escolha um campus</option>';    
+                    var options = '<option value="">Escolha o 1° curso</option>';    
                     $.each(data, function (key, val) {
                         options += '<option value="' + val.curso + '">' + val.curso + '</option>';
                     });                 
                     $("#idCursoPri").html(options);             
-
                     $("#idCursoPri").change(function () {               
-
                         var options_idUnidade = '';
                         var str = "";                   
-
                         $("#idCursoPri option:selected").each(function () {
                             str += $(this).text();
                         });
-
                         $.each(data, function (key, val) {
                             if(val.curso == str) {                           
                                 $.each(val.unidade, function (key_course, val_course) {
@@ -127,13 +112,33 @@ $(document).ready( function() {
                                 });                         
                             }
                         });
-
                         $("#idUnidade").html(options_idUnidade);
-
                     }).change();        
-
                 });
-
+                //Controla Select de 2° opção de curso
+                $.getJSON('js/opcoes_cursos.json', function (data) {
+                    var items = [];
+                    var options = '<option value="">Escolha uma 2° opção curso</option>';    
+                    $.each(data, function (key, val) {
+                        options += '<option value="' + val.curso + '">' + val.curso + '</option>';
+                    });                 
+                    $("#idCursoSec").html(options);             
+                    $("#idCursoSec").change(function () {               
+                        var options_idUnidade = '';
+                        var str = "";                   
+                        $("#idCursoSec option:selected").each(function () {
+                            str += $(this).text();
+                        });
+                        $.each(data, function (key, val) {
+                            if(val.curso == str) {                           
+                                $.each(val.unidade, function (key_course, val_course) {
+                                    options_idUnidade += '<option value="' + val_course + '">' + val_course + '</option>';
+                                });                         
+                            }
+                        });
+                        $("#idUnidadSec").html(options_idUnidade);
+                    }).change();        
+                });
 
                 
 	//Todos os campos com a classe hora serão validados como time
@@ -182,8 +187,19 @@ $(document).ready( function() {
             },
             idCidade:{
                 required: true
+            },
+            idCursoPri:{
+                required: true
+            },
+            idUnidade:{
+                required: true
+            },
+            idCursoSec:{
+                required: true
+            },
+            idUnidadSec:{
+                required: true
             }
-
         },
 		// Define as mensagens de erro PERSONALIZADAS para cada regra
 		messages:{
@@ -193,6 +209,18 @@ $(document).ready( function() {
 			idCidade:{
 				digits: "Por favor, selecione uma Cidade."
 			},
+            idCursoPri:{
+                digits: "Por favor, selecione um Estado."
+            },
+            idUnidade:{
+                digits: "Por favor, selecione uma Cidade."
+            },
+            idCursoSec:{
+                digits: "Por favor, selecione um Estado."
+            },
+            idUnidadSec:{
+                digits: "Por favor, selecione uma Cidade."
+            },
             rg:{
                 digits: "Por favor, informe o RG corretamente."
             },

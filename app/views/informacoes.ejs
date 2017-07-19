@@ -15,10 +15,10 @@
 <body>
 	<div id="conteudo" class="top">
 		<section id="centroInf">
+			<!-- Gera Pdf a parti de app/public/js/geraPDF -->
 			<button style="align-content: center" class="button is-success" id="geraPdf">Gerar PDF</button>
 			<h1>Dados de Inscrição</h1>
 			<div id="editor"></div>
-			
 			<h2>Dados pessoais</h2>
 			<table class="table is-bordered">
 				<thead>
@@ -62,8 +62,8 @@
 					<td><%= dados.telContato %></td>
 				</tbody>
 			</table>
-			</section>
-			<section id="centroInf">
+		</section>
+		<section id="centroInf">
 			<table class="table is-bordered">
 				<h2>Endereço</h2>
 				<thead>
@@ -115,8 +115,8 @@
 					<td>Brasil</td>
 				</tbody>
 			</table>
-			</section>
-			<section id="centroInf">
+		</section>
+		<section id="centroInf">
 			<h2>Informações do curso</h2>
 			<table class="table is-bordered">
 				<thead>
@@ -143,11 +143,12 @@
 				</thead>
 				<tbody>
 					<td><%= dados.idCursoSec %></td>
-					<td>dados.idUnidade</td>
+					<td><%= dados.idUnidadSec %></td>
 				</tbody>
 			</table>
 			<p><h2>Assinatura: </h2></p>
-			<img src="<%= dados.assinatura %>" alt="">
+			<!--<img style="height: 50px; width: 50px" src="img/4.jpg" alt="Assinatura">-->
+			<div id="fim"></div>
 		</section>
 	</div>
 </body>
