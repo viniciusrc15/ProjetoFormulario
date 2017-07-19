@@ -1,5 +1,5 @@
 # Projeto de formulário para registro de informações
-Aplicação construida com NodeJS, Bulma.io, JQuery, Express, EJS, Commonjs, Body-parser, EJS e Consign.
+Aplicação construida com NodeJS, Bulma.io, JQuery, CSS e modulos Express, EJS, Commonjs, Body-parser, EJS e Consign.
 
 <h2>Como rodar o projeto </h2>
 <ul>
