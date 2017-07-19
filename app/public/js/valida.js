@@ -134,41 +134,8 @@ $(document).ready( function() {
 
                 });
 
-                // opções de cursos 
 
-                    $.getJSON('opcoes_cursos.json', function (data) {
-
-                var items = [];
-                var options = '<option value="">escolha um campus</option>';    
-
-                $.each(data, function (key, val) {
-                    options += '<option value="' + val.nome + '">' + val.nome + '</option>';
-                });                 
-                $("#").html(options);             
-
-                $("#idCursoPri").change(function () {               
-
-                    var options_cursos = '';
-                    var str = "";                   
-
-                    $("#idCursoPri option:selected").each(function () {
-                        str += $(this).text();
-                    });
-
-                    $.each(data, function (key, val) {
-                        if(val.nome == str) {                           
-                            $.each(val.cursos, function (key_course, val_course) {
-                                options_cursos += '<option value="' + val_course + '">' + val_course + '</option>';
-                            });                         
-                        }
-                    });
-
-                    $("#idCursoPri").html(options_cidades);
-
-                }).change();        
-
-            });
-
+                
 	//Todos os campos com a classe hora serão validados como time
 	$.validator.addClassRules({
 		hora: {time:true}

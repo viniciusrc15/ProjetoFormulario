@@ -1,17 +1,14 @@
 [{
-	                        
 	"sigla": "SI",
 	"curso": "Sistemas de Informação",
 	"unidade": [
 		"Barro Preto",
-<<<<<<< HEAD
 		"Raja",
 		"Praça da Liberdade",
 		"Centro"
 	]	
  },
  {
-	                        
 	"sigla": "CC",
 	"curso": "Ciência da Computação",
 	"unidade": [
@@ -20,10 +17,4 @@
 	]	
  }
 ]
-=======
-		"Raja"
-		"Praça da Liberdade",
-		"Centro"
-	]	
- }]
->>>>>>> e9714d3d43477d3fc2af3b9f199c1eb8c0333297
+
