@@ -102,6 +102,37 @@ $(document).ready( function() {
             	}).change();		
 
             });
+                // opções de cursos 
+                $.getJSON('js/opcoes_cursos.json', function (data) {
+                    var items = [];
+                    var options = '<option value="">escolha um campus</option>';    
+                    $.each(data, function (key, val) {
+                        options += '<option value="' + val.curso + '">' + val.curso + '</option>';
+                    });                 
+                    $("#idCursoPri").html(options);             
+
+                    $("#idCursoPri").change(function () {               
+
+                        var options_idUnidade = '';
+                        var str = "";                   
+
+                        $("#idCursoPri option:selected").each(function () {
+                            str += $(this).text();
+                        });
+
+                        $.each(data, function (key, val) {
+                            if(val.curso == str) {                           
+                                $.each(val.unidade, function (key_course, val_course) {
+                                    options_idUnidade += '<option value="' + val_course + '">' + val_course + '</option>';
+                                });                         
+                            }
+                        });
+
+                        $("#idUnidade").html(options_idUnidade);
+
+                    }).change();        
+
+                });
 
 	//Todos os campos com a classe hora serão validados como time
 	$.validator.addClassRules({
@@ -163,9 +194,9 @@ $(document).ready( function() {
             rg:{
                 digits: "Por favor, informe o RG corretamente."
             },
-			telContato:{
-				required: "Por favor, digite o telefone corretamente."
-			},   
+            telContato:{
+                required: "Por favor, digite o telefone corretamente."
+            },   
             email:{ 
                 required: "Entre com seu email.",
                 email: "Entre com um email válido."

@@ -1,0 +1,21 @@
+[{
+	                        
+	"sigla": "SI",
+	"curso": "Sistemas de Informação",
+	"unidade": [
+		"Barro Preto",
+		"Raja",
+		"Praça da Liberdade",
+		"Centro"
+	]	
+ },
+ {
+	                        
+	"sigla": "CC",
+	"curso": "Ciência da Computação",
+	"unidade": [
+		"Barro Preto",
+		"Raja"
+	]	
+ }
+]
