@@ -3,23 +3,24 @@
 <head>
 	<meta charset="UTF-8">
 	<script src="js/jquery-1.5.2.min.js" type="text/javascript"></script>
-	<link rel="stylesheet" href="css/bulma.css">
+	<link rel="stylesheet" href="css/bulma.css"> 
 	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 	<link rel="shortcut icon" href="img/inf.ico">
 	<script src="js/jspdf.min.js"></script>
 	<script src="js/html2canvas.js"></script>
 	<script src="js/geraPDF.js" type="text/javascript"></script>
 	<link rel="stylesheet" type="text/css" href="css/estilo.css" />
-	<title>Informações cadastro</title>
+	<link href="https://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet">
+	<title>Informações Cadastrais</title>
 </head>
 <body>
 	<div id="conteudo" class="top">
 		<section id="centroInf">
-			<!-- Gera Pdf a parti de app/public/js/geraPDF -->
-			<button style="align-content: center" class="button is-success" id="geraPdf">Gerar PDF</button>
-			<h1>Dados de Inscrição</h1>
+			<!-- Gera Pdf apartir de app/public/js/geraPDF -->
+			<button style="align-content: center" class="button is-success is-hover" id="geraPdf">Gerar PDF</button>
+			<h1>Dados do Inscrito</h1><br><br>
 			<div id="editor"></div>
-			<h2>Dados pessoais</h2>
+			<!--<h2>Dados pessoais</h2>-->
 			<table class="table is-bordered">
 				<thead>
 					<td>
@@ -30,7 +31,7 @@
 					</td>
 				</thead>
 				<tbody>
-					<td><%= dados.nome %></td>
+					<td padding = "0"><%= dados.nome %></td>
 					<td><%= dados.dtNascimento %></td>
 				</tbody>
 			</table>
@@ -146,9 +147,8 @@
 					<td><%= dados.idUnidadSec %></td>
 				</tbody>
 			</table>
-			<div class="assinatura" >
-			<h2>Assinatura: </h2>
-			<img class="assinatura" src="/uploads/assinatura-1500509222991.jpg" alt=""></div>
+			<p><h2>Assinatura: </h2></p>
+			<img class ="image is-96x96" src="loader.png" alt="Assinatura">
 			<div id="fim"></div>
 		</section>
 	</div>

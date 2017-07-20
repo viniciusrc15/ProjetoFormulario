@@ -1,4 +1,4 @@
-/* Trata paginas home e infomacoes*/ 
+i/* Trata paginas home e infomacoes*/ 
 html{
 	background: rgba(74, 74, 74, 0.38);
 }
@@ -14,28 +14,53 @@ body{
 	font-size:12px;
 }
 
+p{
+	vertical-align: middle;
+}
+
 
 /* Trata home formulario */ 
 #centroHome{
 	background: white;
-	padding:15px;
+	padding:10px;
 	box-shadow: 1px 1px 1px 1px #4a4a4a;
 	margin: 0px auto;
 	width:500px;
+
 }
 h1{
 	text-align:center; 
-	color: #4682B4; 
+	color: #191970; 
 	font-weight: bold;
 	font-size: 20px;
+	font-family: 'ABeeZee', sans-serif; 
 }
 h2{
 	font-weight: bold;
 	color: #708090;
 	font-size: 20px;
+	font-family: 'ABeeZee', sans-serif;
+}
+h3{
+	font-family: 'ABeeZee', sans-serif;
+}
+
+td {
+	font-family: 'ABeeZee', sans-serif;
 }
 legend{
 	font-weight:bold;
+	font-family: 'ABeeZee', sans-serif;
+	color: #0000FF;
+}
+
+button {
+	font-family: 'ABeeZee', sans-serif;
+}
+
+select {
+	font-family: 'ABeeZee', sans-serif;
+	width: 220px;
 }
 .top{
 	margin-top: 20px;
@@ -48,10 +73,12 @@ em {
 	font-weight: bold; 
 	vertical-align: 
 	top; color:red; 
+	font-family: 'ABeeZee', sans-serif;
 }
 label.error { 
 	display: block; 
 	margin-top: 10px; 
+	font-family: 'ABeeZee', sans-serif;
 }
 label.error { 
 	text-align:left; 
@@ -59,17 +86,35 @@ label.error {
 	color: red; 
 	margin: 0 .5em 0 0; 
 	vertical-align: top; 
-	font-size: 10px 
+	font-size: 10px;
+	font-family: 'ABeeZee', sans-serif;
+}
+
+label.hora {
+
+    display: inline-block;
+    width: 90px;
+}
+input{
+	font-family: 'ABeeZee', sans-serif;
 }
 
 
-.input80{width:300px;}
-.input60{width:250px;}
+
+
+.input80{width:280px;}
+.input60{width:200px;}
 .input40{width:180px;}
-.telefone{width:100px;}
+.telefone{width:160px;}
+.rg{width: 105px;}
+.cep{width: 80px;}
+.email{width: 300px;}
+.cpf{width: 110px;}
+.nasc{width: 95px;}
 .input10{width:50px;}
-.input9{width:75px;}
-.input1{width:95px;}
+.input9{width:80px;}
+.input1{width:160px;}
+
 fieldset{
 	margin-bottom:15px;
 	border: none;
@@ -77,12 +122,16 @@ fieldset{
 fieldset p{
 	margin-left:5px;
 	margin-bottom:5px;
+	font-family: 'ABeeZee', sans-serif;
+	padding: 2px;
+	align-items: right;
+	vertical-align: middle;
 }
 
 
 /*Trata selects */ 
 #estado{width:200px;}
-.altSelectUni{width:165px;}
+.altSelectUni{width:143px;}
 .altSelectCurs{width:197px;}
 #unidade{width:187px;}
 select{
@@ -100,18 +149,11 @@ select{
 }
 thead{
 	background: grey;
+	padding: 5pt;
+	display: fixed;
+	margin-left: 5pt;
 }
 thead td h3{
 	font-weight: bold;
 	color: black; 
-}
-.assinatura{
-    float: right;
-    margin-top: -218px;
-    margin-right: 45px;
-}
-.assinatura img{
-	width: 122px;
-    height: 70px;
-    margin-top: auto;
 }
