@@ -3,7 +3,7 @@ $(document).ready( function() {
 	//Imprime certo porem hora sim hora nao
 	console.log($(window).load());
 	$('#geraPdf').click(function() {
-		var doc = new jsPDF('Portrait', 'pt', 'a4');
+		var doc = new jsPDF('Landscap', 'pt', 'a4');
 		doc.addHTML($('#conteudo'), function() {
 			doc.save("informacoes.pdf");
 		});

@@ -82,7 +82,7 @@ fieldset p{
 
 /*Trata selects */ 
 #estado{width:200px;}
-.altSelectUni{width:143px;}
+.altSelectUni{width:165px;}
 .altSelectCurs{width:197px;}
 #unidade{width:187px;}
 select{
@@ -104,4 +104,14 @@ thead{
 thead td h3{
 	font-weight: bold;
 	color: black; 
+}
+.assinatura{
+    float: right;
+    margin-top: -218px;
+    margin-right: 45px;
+}
+.assinatura img{
+	width: 122px;
+    height: 70px;
+    margin-top: auto;
 }

@@ -9,6 +9,28 @@ jQuery(function($){
 });
 
 $(document).ready( function() {
+    //Faz upload de assinatura
+    var arquivo = $("#assinatura");
+    arquivo.on('change', function (event) {
+      if (arquivo[0].files.length == 0)
+        return false;
+
+    var data = new FormData();
+    //console.log(data);
+    data.append('assinatura', arquivo[0].files[0]); 
+    console.log(data);
+    $.ajax({
+        url: "/salvarAssinatura",
+        data: data,
+        contentType: false,
+        processData: false,
+        type: "POST",
+        success: function(data){
+
+                }
+        });
+        return false;
+    });
     function limpa_formulário_cep() {
                 // Limpa valores do formulário de cep.
                 $("#rua").val("");
