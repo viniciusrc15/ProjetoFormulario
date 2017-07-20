@@ -4,7 +4,7 @@ jQuery(function($){
    $(".telefone").mask("(99) 99999-9999");
    $("#cep").mask("99999-999");
    $("#rg").mask("**99999-999");
-   $("#cpf").mask("99999999999");
+   $("#cpf").mask("999.999.999-99");
    //Mascara gerada pelo plugin plugin price-format
 });
 
@@ -22,18 +22,18 @@ $(document).ready( function() {
         var b = new Number;
         var c = 11;
         for (i=0; i<11; i++){
-           a[i] = cpf.charAt(i);
-           if (i < 9) b += (a[i] * --c);
-        }
-        if ((x = b % 11) < 2) { a[9] = 0 } else { a[9] = 11-x }
-            b = 0;
-        c = 11;
-        for (y=0; y<10; y++) b += (a[y] * c--);
-            if ((x = b % 11) < 2) { a[10] = 0; } else { a[10] = 11-x; }
-        var retorno = true;
-        if ((cpf.charAt(9) != a[9]) || (cpf.charAt(10) != a[10]) || cpf.match(expReg)) retorno = false;
-        return this.optional(element) || retorno;
-    }, "Informe um CPF válido");
+         a[i] = cpf.charAt(i);
+         if (i < 9) b += (a[i] * --c);
+     }
+     if ((x = b % 11) < 2) { a[9] = 0 } else { a[9] = 11-x }
+        b = 0;
+    c = 11;
+    for (y=0; y<10; y++) b += (a[y] * c--);
+        if ((x = b % 11) < 2) { a[10] = 0; } else { a[10] = 11-x; }
+    var retorno = true;
+    if ((cpf.charAt(9) != a[9]) || (cpf.charAt(10) != a[10]) || cpf.match(expReg)) retorno = false;
+    return this.optional(element) || retorno;
+}, "Informe um CPF válido");
 
     //Faz upload de assinatura
     var arquivo = $("#assinatura");
@@ -53,10 +53,10 @@ $(document).ready( function() {
         type: "POST",
         success: function(data){
 
-                }
-        });
-        return false;
+        }
     });
+    return false;
+});
     function limpa_formulário_cep() {
                 // Limpa valores do formulário de cep.
                 $("#rua").val("");
@@ -116,28 +116,28 @@ $(document).ready( function() {
             	var items = [];
             	var options = '<option value="">Escolha um estado</option>';	
                 //Percorre json trazendo dados
-            	$.each(data, function (key, val) {
-            		options += '<option value="' + val.nome + '">' + val.nome + '</option>';
-            	});					
+                $.each(data, function (key, val) {
+                  options += '<option value="' + val.nome + '">' + val.nome + '</option>';
+              });					
                 //inclui no id select
-            	$("#uf").html(options);				
+                $("#uf").html(options);				
                 //muda conteudo select conforme intens dentro das opçoes
-            	$("#uf").change(function () {				
-            		var options_cidades = '';
-            		var str = "";					
-            		$("#uf option:selected").each(function () {
-            			str += $(this).text();
-            		});
-            		$.each(data, function (key, val) {
-            			if(val.nome == str) {							
-            				$.each(val.cidades, function (key_city, val_city) {
-            					options_cidades += '<option value="' + val_city + '">' + val_city + '</option>';
-            				});							
-            			}
-            		});
+                $("#uf").change(function () {				
+                  var options_cidades = '';
+                  var str = "";					
+                  $("#uf option:selected").each(function () {
+                     str += $(this).text();
+                 });
+                  $.each(data, function (key, val) {
+                     if(val.nome == str) {							
+                        $.each(val.cidades, function (key_city, val_city) {
+                           options_cidades += '<option value="' + val_city + '">' + val_city + '</option>';
+                       });							
+                    }
+                });
                     //retorna pro select conforme opçoes
-            		$("#cidade").html(options_cidades);
-            	}).change();		
+                    $("#cidade").html(options_cidades);
+                }).change();		
             });
                 //Controla Select de 1° opção de curso 
                 $.getJSON('js/opcoes_cursos.json', function (data) {
