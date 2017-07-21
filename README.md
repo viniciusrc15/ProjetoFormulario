@@ -7,7 +7,7 @@ Aplicação construida com NodeJS, Bulma.io, JQuery, CSS e modulos Express, EJS,
     Instalar NodeJs no computador.
   </li>
   <li>
-    Fazer um git clone do projeto.
+    Fazer o download do projeto.
   </li>
   <li>
     Abrir o terminal ou prompt e na pasta do projeto usar "npm install" para baixar os módulos do projeto.
