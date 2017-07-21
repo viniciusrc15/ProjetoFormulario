@@ -60,14 +60,15 @@ $(document).ready( function() {
 	$(document).ready( function() {
 		/*
 		 * Aqui é função que o botão chama */
-		 
+
 		$('#geraPDF').click(function() {
 
+			alert("Vamos conseguir");
 			
 			PDFJS.workerSrc = "js/pdfjs/build/pdf.worker.js";
 			PDFJS.disableWorker = true; 
-			PDFJS.getDocument('informacoes');
-			PDFJS.getDocument('informacoes').then(function(pdf) {
+			PDFJS.getDocument('informacoes.pdf');
+			PDFJS.getDocument('informacoes.pdf').then(function(pdf) {
 
 				var scale = 1.5;
 				var viewport = page.getViewport(scale);
