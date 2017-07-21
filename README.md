@@ -30,7 +30,7 @@ Aplicação construida com NodeJS, Bulma.io, JQuery, CSS e modulos Express, EJS,
   <li>
     <p>Thais: 
       
-    </p>
+   </p>
     
   </li>
  </ul>
