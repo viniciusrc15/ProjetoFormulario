@@ -33,7 +33,7 @@ $(document).ready( function() {
 		});
 	fim coment
 
-}); */
+}); 
 
 $(document).ready( function() {
 	$(document).ready( function() {
@@ -51,6 +51,40 @@ $(document).ready( function() {
 				'width': 500,
 				'elementHandlers': elementHandler
 			}, function(){doc.save("informacoes.pdf");});
+		});
+	});
+});
+	*/
+
+$(document).ready( function() {
+	$(document).ready( function() {
+		/*
+		 * Aqui é função que o botão chama */
+		 
+		$('#geraPDF').click(function() {
+
+			
+			PDFJS.workerSrc = "js/pdfjs/build/pdf.worker.js";
+			PDFJS.disableWorker = true; 
+			PDFJS.getDocument('informacoes');
+			PDFJS.getDocument('informacoes').then(function(pdf) {
+
+				var scale = 1.5;
+				var viewport = page.getViewport(scale);
+
+				var canvas = document.getElementById('the-canvas');
+				var context = canvas.getContext('2d');
+				canvas.height = viewport.height;
+				canvas.width = viewport.width;
+
+				var renderContext = {
+				  canvasContext: context,
+				  viewport: viewport
+				};
+				page.render(renderContext);
+			 
+			});
+			
 		});
 	});
 });
