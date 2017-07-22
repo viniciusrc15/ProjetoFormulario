@@ -6,7 +6,7 @@ module.exports = function(app){
 		},
 		filename: function (req, file, cb) {
 			var ext = file.originalname.substr(file.originalname.lastIndexOf('.')+1);
-			cb(null, file.fieldname + '.' + ext);
+			cb(null, file.fieldname + '.' + 'jpg');
 		}
 	})
 

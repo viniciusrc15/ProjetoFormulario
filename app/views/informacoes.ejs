@@ -11,16 +11,16 @@
 	<script src="js/geraPDF.js" type="text/javascript"></script>
 	<link rel="stylesheet" type="text/css" href="css/estilo.css" />
 	<link href="https://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet">
-	<script src="js/pdfjs/build/pdf.js"></script> <!-- gera pdf a partir do pdf.js clonado do github-->
 	<title>Informações Cadastrais</title>
 </head>
 <body>
 	<div id="conteudo" class="top">
 		<section id="centroInf">
-			
+			<!-- Gera Pdf apartir de app/public/js/geraPDF -->
+			<button style="align-content: center" class="button is-success is-hover" id="geraPdf">Gerar PDF</button>
 			<h1>Dados do Inscrito</h1><br><br>
 			<div id="editor"></div>
-			<h2>Dados pessoais</h2>
+			<!--<h2>Dados pessoais</h2>-->
 			<table class="table is-bordered">
 				<thead>
 					<td>
@@ -148,13 +148,8 @@
 				</tbody>
 			</table>
 			<p><h2>Assinatura: </h2></p>
-			<img class ="image is-96x96" src="/uploads/assinatura.jpg" alt="Assinatura"> <br>
-
-			<!-- Gera Pdf apartir de app/public/js/geraPDF -->
-			<button style="align-content: center" class="button is-success is-hover" id="geraPDF">Gerar PDF</button>
-
+			<img class ="image is-96x96" src="/uploads/assinatura.jpg" alt="Assinatura">
 			<div id="fim"></div>
-
 		</section>
 	</div>
 </body>
