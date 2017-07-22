@@ -85,8 +85,7 @@ if (typeof jQuery !== "undefined" && typeof saveAs !== "undefined") {
 
 
 $(document).ready( function() {
-
-	$("a.jquery-word-export").click(function(event) {
+	$("button.jquery-word-export").click(function(event) {
 		$("#page-content").wordExport();
 	});
 	$('#geraPdf').click(function() {
