@@ -1,5 +1,5 @@
 # Projeto de formulário para registro de informações
-Aplicação construida com NodeJS, Bulma.io, JQuery, CSS e modulos Express, EJS, Commonjs, Body-parser, EJS, Multer e Consign.
+Aplicação construida com NodeJS, Bulma.io, JQuery, CSS, modulos Express, EJS, Commonjs, Body-parser, EJS, Multer e Consign.
 
 <h2>Como rodar o projeto </h2>
 <ul>
@@ -13,7 +13,7 @@ Aplicação construida com NodeJS, Bulma.io, JQuery, CSS e modulos Express, EJS,
     Abrir o terminal ou prompt e na pasta do projeto usar "npm install" para baixar os módulos do projeto.
   </li>
   <li>
-    Ainda no terminal ou prompt rodar node no arquivo "app.js" para rodar o projeto. Ex: "node app"
+    Ainda no terminal ou prompt rodar "npm start".
   </li>
   <li>
     Abrir o browser e no campo de pesquisa digitar localhost:8080 
